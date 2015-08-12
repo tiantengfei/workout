@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Using the Bootstrap Grid classes</title>
+    <meta name="viewport" content="width=device-width, initial-
+ scale=1.0">
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"
+          media="screen">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <header class="site-header">
+        <h1>Using variables and mixins to create a grid
+            layout</h1>
+        <div class="page-header">
+            <h1>Packt Publishing: <small>Always finding a way</small></h1>
+        </div>
+    </header>
+
+    <!--navigation-->
+    <div>
+        <h1 class="text-info">navigation</h1>
+        <nav role="navigation" class="navbar navbar-default">
+            <div class="navbar-header">
+
+                <button type="button" data-target="#navbarCollapse" datatoggle="collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Packt Publishing</a>
+            </div>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#"> Books and Videos
+                    </a></li>
+                    <li><a href="#"> Articles </a></li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle"
+                           href="#"> Categories <b class="caret"></b></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li><a href="#"> Web development </a></li>
+                            <li><a href="#"> Game Development </a></li>
+                            <li><a href="#"> Big Data and Business
+                                Intelligence </a></li>
+                            <li><a href="#"> Virtualization and Cloud </a></li>
+                            <li><a href="#"> Networking and Servers </a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"> Miscellaneous </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> Support </a></li>
+                </ul>
+                <form role="search" class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" placeholder="Search Here"
+                               class="form-control">
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <button type="submit" class="btn btn-default"><span
+            class="glyphicon glyphicon-envelope"></span> Mail
+    </button>
+    <div>
+        <div class="row">
+            <div class="col-sm-9">
+                <!--
+                <ul class="list-inline" id="packt">
+                    <li><a> Web development </a></li>
+                    <li><a>Application Development </a></li>
+                    <li><a>Big Data and Business Intelligence </a></li>
+                    <li><a>Virtualization and Cloud</a></li>
+                    <li><a>Networking and Servers </a></li>
+                </ul>
+                -->
+                <ul class="breadcrumb">
+                    <li><a href="#">Tech Hub</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li class="active">Article Network</li>
+                    <li><a href="#">Books and Videos</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <div class="input-group">
+ <span class="input-group-addon"><span
+         class="glyphicon glyphicon-search"></span></span>
+                    <input type="text" class="form-control"
+                           placeholder="Search ">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-2">
+            <ul class="nav">
+                <li class="active"><a href="#"> <span class="glyphicon glyphicon-sd-video"> </span> Videos</a></li>
+                <li class="dropdown">
+                    <a href="#"  data-toggle="dropdown" class="dropdowntoggle">
+                        <span class="glyphicon glyphicon-book"> </span> Books
+                        <b class="caret"></b>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-book">
+                            </span> Blog </a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="glyphicon glyphiconbookmark">
+                                </span> Tech Hub </a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="glyphicon glyphicon-book"> </span> Article Network </a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li><a href="#">Support</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"> <span class="glyphicon glyphicon-inbox">
+                    </span> Inbox <span class="badge">50</span></a>
+                </li>
+            </ul>
+
+            <div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Packt Publishing </div>
+                    <div class="panel-body"><a href="#"><strong>Click here</strong></a> to go to the official webpage
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-6 ">
+            <article role="main">
+                <header>
+                    <h2 class="text-left">Packt: Always finding a way</h2>
+                </header>
+                <p class="text-justify">
+                    Chapter 3
+                    <span class="text-danger">[ 53]</span>
+                    Packt is one of the most prolific and fast-growing
+                    tech book publishers in the world. Originally focused
+                    on open<span class="text-muted"> source software</span>, Packt pays a royalty on
+                    relevant <abbr title="Hypertext Markup Language" class="initialism">html</abbr> books directly to
+                    open source projects.
+                    These projects have received over
+                    <mark> $400,000</mark>
+                    as part of
+
+                <div class="well well-sm"> Packt's Open Source Royalty Scheme to date.</div>
+                </p>
+
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr class="success">
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Role</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="info">
+                        <td>Aravind</td>
+                        <td>Shenoy</td>
+                        <td>Technical Content Writer</td>
+                    </tr>
+                    <tr class="bg-primary">
+                        <td>Jim</td>
+                        <td>Morrison</td>
+                        <td>Awesome vocalist</td>
+                    </tr>
+                    <tr class="danger">
+                        <td>Jimi</td>
+                        <td>Hendrix</td>
+                        <td> Amazing Guitarist</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p class="bg-primary">
+                    Our books <span class="text-success">focus on practicality</span>, recognising that
+                    readers are ultimately concerned with getting the job
+                    done.<em>Packt's digitally-focused business model allows
+                    us to publish up-to-date books in very specific
+                    areas</em> .
+                </p>
+
+
+                <blockquote>
+                    <p>
+                        If you are a CakePHP developer looking to ease the burden of
+                        development, then this book is for you.
+                    </p>
+                    <small>CakePHP 2 Application Cookbook <cite title="Source Title">by James Watts, Jorge
+                        González</cite></small>
+                </blockquote>
+
+                <!--label-->
+                <p>Packt<span class="label label-primary"> Always finding a way</span></p>
+
+                <blockquote class="blockquote-reverse">
+                    <p>If you are a CakePHP developer looking to ease the burden of
+                        development, then this book is for you.</p>
+                    <small>CakePHP 2 Application Cookbook <cite title="Source
+ Title">by James Watts, Jorge González</cite></small>
+                </blockquote>
+
+                <p>
+                    <code>The &lt;p&gt; element</code>
+                    With <strong>over 1000</strong> books published, Packt now offers a
+                    subscription service. This app and a PacktLib
+                    subscription now makes finding the information you
+                    need
+                    <del>easier than ever before</del>
+                    .
+                </p>
+
+
+                <footer>
+                    <p class="text-center"><span class="text-info">Posted on: 25-October-2014</span></p>
+
+                    <p class="text-center">
+                        <span class="text-info">Tagged: Packt, PacktLib, Packt Mobile Browser App.</span>
+                    </p>
+                </footer>
+
+                div>
+                <div>
+                    <ul class="pagination pagination-sm">
+                        <li class="disabled"><span>&laquo;</span></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+
+                <div>
+
+                    <button type="button" class="btn btn-default">comments</button>
+                    <button type="submit" class="btn btn-success"
+                            id="packtpub"><span class="glyphicon glyphicon-log-out"></span> Log
+                        out
+                    </button>
+                </div>
+            </article>
+        </div>
+
+
+        <div class="col-sm-3 col-sm-offset-1">
+            <div role="complementary">
+                <aside>
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        <li><a href="http://www.packtpub.com/news-center">
+                            Packt News Center </a></li>
+                        <li><a href="http://www.packtpub.com/support-
+ complaints-and-feedback">Video Support</a></li>
+                        <li><a href="https://careers.packtpub.com/"> Packt
+                            Careers </a></li>
+                    </ul>
+                </aside>
+                <aside>
+                    <h3>Archives</h3>
+                    <ul>
+                        <li><a href="">March 2014</a></li>
+                        <li><a href="">June 2014</a></li>
+                        <li><a href="">July 2014</a></li>
+                    </ul>
+                </aside>
+
+                <div>
+
+                    <h1> Packt Publishing </h1>
+                    <ul class="list-unstyled">
+                        <li> About us</li>
+                        <li> Packt Categories</li>
+                        <li> Packt Subscription Services</li>
+                        <ul>
+                            <li> Mobile Browser App</li>
+                            <li> PacktLib: Online Library</li>
+                        </ul>
+                        <li> News Center</li>
+                        <li>Packt Blog</li>
+                    </ul>
+                    <h1> Reader's space </h1>
+                    <ol>
+                        <li> Packt Categories</li>
+                        <ol class="list-unstyled">
+                            Chapter 4
+                            [ 81 ]
+                            <li> Web development</li>
+                            <li> Application development</li>
+                            <li> Big Data</li>
+                            <li> Networking and Servers</li>
+                            <li> Virtualization and cloud</li>
+                        </ol>
+                        <li> Packt Tech Hub</li>
+                        <li> Article Network</li>
+                        <li> Support</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <address class="text-center">
+            <strong> Packt Publishing Limited. </strong><br>
+            Livery Place, 35 Livery Street,<br>
+            Birmingham, West Midlands, B3 2PB<br>
+            <a href="mailto:contact@packtpub.com"> Contact us </a>
+            Copyright &copy; 2014
+        </address>
+
+    </footer>
+</div>
+
+</body>
+</html>

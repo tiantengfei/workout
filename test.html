@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript">
+        angular.module('app',[]).controller('mainctrl', function($scope){
+
+            this.name = 'ttf';
+            var self = this;
+            setTimeout(function(){
+
+                self.name = 'weihong';
+                $scope.$apply();
+            }, 5000);
+        });
+    </script>
+</head>
+<body ng-app="app">
+<div ng-controller="mainctrl as ctrl">
+    <span ng-bind="ctrl.name"></span>
+
+</div>
+
+</body>
+</html>
